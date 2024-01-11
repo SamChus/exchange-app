@@ -6,10 +6,10 @@ function App() {
   return (
     <Grid
       templateAreas={`"nav nav nav" "info info info" "chart order trans"`}
-      gridTemplateRows={"50px 50px 100vh"}
+      gridTemplateRows={"75px 50px 100vh"}
       gridTemplateColumns={"1fr 200px 200px"}
       fontSize={30}
-      gap={4}
+      gap="8px"
     >
       <GridItem area="nav">
         <NavBar />

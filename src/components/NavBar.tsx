@@ -3,11 +3,12 @@ import logo from "../assets/logo.png";
 import globe from "../assets/globe.png";
 import logout from "../assets/logout.png";
 import ColorSwitchMode from "./ColorSwitchMode";
+import Profile from "./Profile";
 
 
 const NavBar = () => {
   return (
-    <HStack justifyContent="space-between" p={4}>
+    <HStack justifyContent="space-between" p={4} >
       <HStack fontSize="14px" >
         <Image src={logo} mr={8} />
         <div
@@ -30,6 +31,7 @@ const NavBar = () => {
       </HStack>
 
       <HStack>
+        <Profile />
         <Image src={globe} cursor="pointer" title="bnb" />
         <Image src={logout} cursor="pointer" title="logout" />
         <ColorSwitchMode />
