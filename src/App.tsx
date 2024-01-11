@@ -1,6 +1,7 @@
 
 import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import TopInfo from "./components/TopInfo";
 
 function App() {
   return (
@@ -10,14 +11,15 @@ function App() {
       gridTemplateColumns={"1fr 200px 200px"}
       fontSize={30}
       gap="8px"
+      bg="#1C2127"
     >
       <GridItem area="nav">
         <NavBar />
       </GridItem>
-      <GridItem area="info" bg="gold">
-        Info
+      <GridItem area="info">
+        <TopInfo />
       </GridItem>
-      <GridItem area="chart" bg="brown" >
+      {/* <GridItem area="chart" bg="brown" >
         Chart
       </GridItem>
       <GridItem area="order" bg="blue">
@@ -25,7 +27,7 @@ function App() {
       </GridItem>
       <GridItem area="trans" bg="dodgerblue">
         Buy/Sale
-      </GridItem>
+      </GridItem> */}
     </Grid>
   );
 }
