@@ -8,10 +8,5 @@ html,
   height: 100%;
   overflow: hidden; /* Prevent scrolling */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #fff;
-  /* text-align: center; */
-  /* font-size: 14px; */
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px; /* 114.286% */
+
 }

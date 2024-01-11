@@ -2,11 +2,12 @@ import { Button, HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/logo.png";
 import globe from "../assets/globe.png";
 import logout from "../assets/logout.png";
+import ColorSwitchMode from "./ColorSwitchMode";
 
 
 const NavBar = () => {
   return (
-    <HStack bg="#1C2127" justifyContent="space-between" p={4}>
+    <HStack justifyContent="space-between" p={4}>
       <HStack fontSize="14px" >
         <Image src={logo} mr={8} />
         <div
@@ -23,7 +24,7 @@ const NavBar = () => {
         <Button variant="link" fontSize="14px" fontWeight="500px" mr={6}>
           Wallets
         </Button>
-        <Button variant="link" fontSize="14px" fontWeight="500px">
+        <Button variant="link" fontSize="14px" fontWeight="500px" >
           Roqqu Hub
         </Button>
       </HStack>
@@ -31,6 +32,7 @@ const NavBar = () => {
       <HStack>
         <Image src={globe} cursor="pointer" title="bnb" />
         <Image src={logout} cursor="pointer" title="logout" />
+        <ColorSwitchMode />
       </HStack>
     </HStack>
   );
