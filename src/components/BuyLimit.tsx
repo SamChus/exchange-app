@@ -58,7 +58,7 @@ const BuyLimit = () => {
           color={"#fff"}
           p={"4px"}
           textAlign={"center"}
-          bg={"#353945"}
+          bg={"#353945"}  
           w={"50px"}
           borderRadius={100}
           cursor={"pointer"}

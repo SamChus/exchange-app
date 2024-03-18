@@ -12,8 +12,10 @@ import {
   MenuList,
   Text,
   VStack,
+  border,
 } from "@chakra-ui/react";
 import btc_usd from "../assets/btc_usd.png";
+import btc_ther from "../assets/btc_ther.png";
 import dropIcon from "../assets/drop.svg";
 import clock from "../assets/clock.svg";
 import searchIcon from "../assets/Search.png";
@@ -30,6 +32,7 @@ const TopInfo = () => {
     { value: "USD", label: "US Dollars" },
     { value: "EUR", label: "European Euros" },
   ];
+
 
   const [currency, setCurrency] = useState("NGN");
   return (
@@ -54,6 +57,14 @@ const TopInfo = () => {
             border={"1px solid #373B3F"}
             borderRadius={"12px"}
             p={4}
+            w={"412px"}
+            h={"300px"}
+            overflowY={"scroll"}
+            sx={{
+              "::-webkit-scrollbar": {
+                display: "none",
+              },
+            }}
           >
             <Text fontSize={"14px"} fontWeight={"700px"} mb={2}>
               Select Market
@@ -63,14 +74,10 @@ const TopInfo = () => {
                 <Image src={searchIcon} width={"13px"} />
               </InputLeftElement>
               <Input
-                type="tel"
                 placeholder="Search"
                 border={"1px solid #373B3F"}
                 fontSize={"12px"}
                 bg={"#20252B"}
-                _focus={{
-                  border: "1px solid #373B3F",
-                }}
                 mb={4}
               />
             </InputGroup>
@@ -92,7 +99,96 @@ const TopInfo = () => {
             </HStack>
             <Divider />
 
-            {currencies.map((currency) => (
+            <Box>
+              <HStack
+                justifyContent={"space-between"}
+                mt={3}
+                cursor={"pointer"}
+              >
+                <HStack>
+                  <Image src={btc_ther} w={"46px"} />
+                  <Text ml={2} fontSize="14px">
+                    BTC-USDT
+                  </Text>
+                </HStack>
+                <HStack cursor={"pointer"}>
+                  <Text fontSize="14px">$23,234.6</Text>
+                  <Text ml={4} fontSize="14px" color={"#25C26E"}>
+                    +0.005%
+                  </Text>
+                </HStack>
+              </HStack>
+              <HStack
+                justifyContent={"space-between"}
+                mt={3}
+                cursor={"pointer"}
+              >
+                <HStack>
+                  <Image src={btc_ther} w={"46px"} />
+                  <Text ml={2} fontSize="14px">
+                    BTC-USDT
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text fontSize="14px">$23,234.6</Text>
+                  <Text ml={4} fontSize="14px" color={"#25C26E"}>
+                    +0.005%
+                  </Text>
+                </HStack>
+              </HStack>
+              <HStack
+                justifyContent={"space-between"}
+                mt={3}
+                cursor={"pointer"}
+              >
+                <HStack>
+                  <Image src={btc_ther} w={"46px"} />
+                  <Text ml={2} fontSize="14px">
+                    BTC-USDT
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text fontSize="14px">$23,234.6</Text>
+                  <Text ml={4} fontSize="14px" color={"#25C26E"}>
+                    +0.005%
+                  </Text>
+                </HStack>
+              </HStack>
+              <HStack
+                justifyContent={"space-between"}
+                mt={3}
+                cursor={"pointer"}
+              >
+                <HStack>
+                  <Image src={btc_ther} w={"46px"} />
+                  <Text ml={2} fontSize="14px">
+                    BTC-USDT
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text fontSize="14px">$23,234.6</Text>
+                  <Text ml={4} fontSize="14px" color={"#25C26E"}>
+                    +0.005%
+                  </Text>
+                </HStack>
+              </HStack>
+              <HStack justifyContent={"space-between"} mt={3}>
+                <HStack>
+                  <Image src={btc_ther} w={"46px"} />
+                  <Text ml={2} fontSize="14px">
+                    BTC-USDT
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text fontSize="14px">$23,234.6</Text>
+                  <Text ml={4} fontSize="14px" color={"#25C26E"}>
+                    +0.005%
+                  </Text>
+                </HStack>
+              </HStack>
+            </Box>
+
+            {/* {currencies.map((currency) => (
               <MenuItem
                 _hover={{
                   bg: "#252A30",
@@ -111,7 +207,7 @@ const TopInfo = () => {
                   </Box>
                 </HStack>
               </MenuItem>
-            ))}
+            ))} */}
           </MenuList>
         </Menu>
       </HStack>

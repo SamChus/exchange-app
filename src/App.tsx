@@ -21,6 +21,7 @@ function App() {
       gap={3}
       bg="#1C2127"
       px={2}
+      
     >
       <GridItem area="nav">
         <NavBar />
