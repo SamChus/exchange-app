@@ -13,10 +13,10 @@ const TradingViewWidget: React.FC = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       autosize: true,
-      symbol: "NASDAQ:AAPL",
+      symbol: "BINANCE:BTCUSD",
       interval: "D",
       timezone: "Etc/UTC",
-      theme: "light",
+      theme: "dark",
       style: "1",
       locale: "en",
       enable_publishing: false,
@@ -34,22 +34,17 @@ const TradingViewWidget: React.FC = () => {
     <div
       className="tradingview-widget-container"
       ref={container}
-      style={{ height: "100%", width: "100%" }}
-    >
-      <div
-        className="tradingview-widget-container__widget"
-        style={{ height: "calc(100% - 32px)", width: "100%" }}
-      ></div>
-      <div className="tradingview-widget-copyright">
-        <a
-          href="https://www.tradingview.com/"
-          rel="noopener nofollow"
-          target="_blank"
-        >
-          <span className="blue-text">Track all markets on TradingView</span>
-        </a>
-      </div>
-    </div>
+      style={{
+        width: "100%",
+        fontSize: "14px",
+        marginLeft: "10px",
+        padding:"10px",
+        borderRadius: "8px",
+        overflow: "hidden",
+        border: "1px solid #262932",
+        background: "transparent",
+      }}
+    ></div>
   );
 };
 

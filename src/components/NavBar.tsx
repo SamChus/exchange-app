@@ -34,7 +34,7 @@ const NavBar = () => {
         <Profile />
         <Image src={globe} cursor="pointer" title="bnb" />
         <Image src={logout} cursor="pointer" title="logout" />
-        <ColorSwitchMode />
+        {/* <ColorSwitchMode /> */}
       </HStack>
     </HStack>
   );
