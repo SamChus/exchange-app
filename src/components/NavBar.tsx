@@ -1,4 +1,4 @@
-import { Button, HStack, Image, Text } from "@chakra-ui/react";
+import { Button, HStack, Image, Link, Text } from "@chakra-ui/react";
 import logo from "../assets/logo.png";
 import globe from "../assets/globe.png";
 import logout from "../assets/logout.png";
@@ -8,8 +8,8 @@ import Profile from "./Profile";
 
 const NavBar = () => {
   return (
-    <HStack justifyContent="space-between" p={4} >
-      <HStack fontSize="14px" >
+    <HStack justifyContent="space-between" p={4}>
+      <HStack fontSize="14px">
         <Image src={logo} mr={8} />
         <div
           style={{
@@ -19,15 +19,33 @@ const NavBar = () => {
             opacity: "0.16",
           }}
         />
-        <Button variant="link" fontSize="14px" fontWeight="500px" ml={8} mr={6}>
+        <Link
+          href="/exchange"
+          variant="link"
+          fontSize="14px"
+          fontWeight="500px"
+          ml={8}
+          mr={6}
+        >
           Exchange
-        </Button>
-        <Button variant="link" fontSize="14px" fontWeight="500px" mr={6}>
+        </Link>
+        <Link
+          href="/wallets"
+          variant="link"
+          fontSize="14px"
+          fontWeight="500px"
+          mr={6}
+        >
           Wallets
-        </Button>
-        <Button variant="link" fontSize="14px" fontWeight="500px" >
-          Roqqu Hub
-        </Button>
+        </Link>
+        <Link
+          href="/dapp"
+          variant="link"
+          fontSize="14px"
+          fontWeight="500px"
+        >
+          Dapp
+        </Link>
       </HStack>
 
       <HStack>

@@ -1,10 +1,8 @@
-/* Apply this CSS to reset margins and padding */
-/* @tailwind components;
-@tailwind utilities; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+/* Add any custom styles here */
 
 @layer components {
   .all-\[unset\] {
@@ -42,17 +40,44 @@ html{
 
 * {
   box-sizing: border-box;
-  color: #fff;
+  /* color: #fff; */
 }
-
 
 /* Demo only */
 body {
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white bg-opacity-50 backdrop-blur-lg border border-white border-opacity-20 shadow-lg;
+}
+
+.crypto-chart {
+  @apply h-[300px] w-full;
+}
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .selected-item {
@@ -64,7 +89,7 @@ body {
   --highlight-x-pos: 0;
   font-size: 12px;
   display: flex;
-  max-width:640px;
+  max-width: 640px;
   height: 32px;
   align-items: flex-start;
   flex-shrink: 0;
@@ -73,7 +98,7 @@ body {
 .controls {
   display: inline-flex;
   justify-content: space-between;
-  background: #12171D;
+  background: #12171d;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   font-weight: 500;
@@ -123,7 +148,7 @@ body {
   background: #21262c;
   box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.04),
     0px 3px 8px 0px rgba(0, 0, 0, 0.12);
-  width: 100px ;
+  width: 100px;
 
   transform: translateX(var(--highlight-x-pos));
   position: absolute;
@@ -152,6 +177,6 @@ body {
   }
 }
 
-.price{
-  position: relative ;
+.price {
+  position: relative;
 }

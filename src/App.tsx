@@ -10,36 +10,49 @@ import OpenOrders from "./components/OpenOrders";
 function App() {
   return (
     <Grid
-      templateAreas={`"nav nav nav" 
-                    "info info info"
-                    "chart order trans"
-                    "history history history"
-                    `}
-      gridTemplateRows={"75px 75px 561px 50vh"}
-      gridTemplateColumns={"60% 1fr 1fr"}
+      templateAreas={{
+      base: `"nav" 
+           "info"
+           "chart"
+           "order"
+           "trans"
+           "history"`,
+      md: `"nav nav nav" 
+         "info info info"
+         "chart order trans"
+         "history history history"`
+      }}
+      gridTemplateRows={{
+      base: "75px 75px 1fr 1fr 1fr 1fr",
+      md: "75px 75px 561px 50vh"
+      }}
+      gridTemplateColumns={{
+      base: "1fr",
+      md: "60% 1fr 1fr"
+      }}
       fontSize={30}
       gap={3}
       bg="#1C2127"
       px={2}
-      
+      color={"#fff"}
     >
       <GridItem area="nav">
-        <NavBar />
+      <NavBar />
       </GridItem>
       <GridItem area="info">
-        <TopInfo />
+      <TopInfo />
       </GridItem>
       <GridItem area="chart">
-        <TradeView />
+      <TradeView />
       </GridItem>
       <GridItem area="order">
-        <OrderBook />
+      <OrderBook />
       </GridItem>
       <GridItem area="trans">
-        <BuyLimit />
+      <BuyLimit />
       </GridItem>
       <GridItem area="history">
-        <OpenOrders />
+      <OpenOrders />
       </GridItem>
     </Grid>
   );
