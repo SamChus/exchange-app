@@ -3,28 +3,31 @@ import App from "../App";
 import Exchange from "../features/Exchange";
 import Wallets from "../features/Wallets";
 import DappMgt from "../features/Dapp";
-
-
-
+import Layout from "../layout";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
         path: "/",
-        element: <App />
-    },
-    {
+        element: <App />,
+      },
+      {
         path: "/exchange",
-        element: <Exchange />
-    },
-    {
+        element: <Exchange />,
+      },
+      {
         path: "/wallets",
-        element: <Wallets />
-    },
-    {
+        element: <Wallets />,
+      },
+      {
         path: "/dapp",
-        element: <DappMgt />
-    }
-])
-
+        element: <DappMgt />,
+      },
+    ],
+  },
+]);
 
 export default router;
